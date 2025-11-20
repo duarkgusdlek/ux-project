@@ -1,0 +1,235 @@
+/*전역 스타일*/
+
+html, body{height: 100%;}
+
+body{
+    background-image: url('https://img.segye.com/content/image/2022/01/22/20220122505398.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    background-color: rgba(255, 255, 255, 0.7);  /* 흰 레이어 */
+    background-blend-mode: lighten;
+    
+
+}
+
+body.contactpage{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*---------------------------------------------------*/
+/*헤더랑 푸터------------------------------------*/
+/*---------------------------------------------------*/
+/* contact 페이지: 맨 위에서는 완전 투명 */
+body.contactpage header {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* contact + 스크롤 시: 공통 scrolled 형태 쓰거나, 살짝 다르게 줄 수도 있음 */
+body.contactpage header.scrolled {
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+
+footer{
+
+    margin-top: auto;   /* 위의 콘텐츠가 남는 공간을 다 먹고, 푸터는 맨 아래로 밀림 */
+}
+
+
+/*---------------------------------------------------*/
+/*섹션 파트*/
+/*---------------------------------------------------*/
+
+#contact-page {
+    padding-top: 140px;
+    width: 100%;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem 1rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: red;
+    font-weight: 500;
+}
+
+/* 한 줄 (label + input/textarea) */
+#contact-page .폼 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* 문의내용 줄은 위에 붙이기 */
+#contact-page .문의구역 {
+    align-items: flex-start;
+}
+
+/* label */
+#contact-page label {
+    width: 80px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+}
+
+/* ✅ input 박스 다시 또렷하게 */
+#contact-page input {
+    flex: 1;
+    border: 1px solid #000b11;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    box-sizing: border-box;
+}
+
+/* ✅ textarea 박스 */
+#contact-page textarea {
+    flex: 1;
+    min-height: 200px;
+    border: 1px solid #000b11;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    resize: vertical;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* ✅ placeholder 색 (배경 위에서 잘 보이게) */
+#contact-page input::placeholder,
+#contact-page textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* 보내기 버튼 (가로 짧게) */
+.contact-submit {
+    display: block;
+    width: fit-content;
+    padding: 10px 22px;
+    background: #000b11;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 1rem auto 0;
+    cursor: pointer;
+    border: none;
+}
+
+/* 버튼 텍스트가 안 보이지 않게 기본 리셋 덮어쓰기 */
+button.contact-submit {
+    font-family: inherit;
+}
+
+/* 게시판 영역 */
+#contact-board {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem 1rem;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.board-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.board-help {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 0.4rem;
+}
+
+#saved-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* 카드 */
+.saved-item {
+    background: rgba(255,255,255,0.85);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 12px;
+    font-size: 0.9rem;
+}
+
+.saved-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+}
+
+.saved-name {
+    font-weight: 600;
+}
+
+.saved-email {
+    opacity: 0.7;
+}
+
+.saved-date {
+    margin-left: auto;
+    opacity: 0.5;
+}
+
+.saved-message {
+    margin-top: 4px;
+    white-space: pre-wrap;
+}
+
+/* 내용 보기/숨기기 버튼 */
+.view-btn {
+    margin-left: auto;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: transparent;
+    cursor: pointer;
+}
+
+/* 교수님 모드 버튼 */
+.admin-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+
+.admin-btn.active {
+    background: #000b11;
+    color: #fff;
+}
+

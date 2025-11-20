@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나노고분자소재연구실</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <link rel="stylesheet" href="./CSS/공통.css">
+    <link rel="stylesheet" href="./css/style5.css">
+    
+
+    <!-- 외부 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+
+    <body class="contactpage">
+        <!-- 메뉴영역 -->
+        <header>
+            <div class="wrapper">
+             <!-- 로고 -->
+             <a class="log" href="index.html"><img src="https://pr.sejong.ac.kr/_res/sejong/news/img/promotion/img-logo10.png" alt="로고"></a>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="research.html">research</a></li>
+                        <li><a href="faculty.html">faculty</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+  <section id="contact-page">
+    <div class="contact-container">
+      <p class="contact-title">연락하고 싶다면 여기로 남겨주세요</p>
+
+      <form id="contact-form">
+        <div class="폼">
+        <label for="name">이름</label>
+          <input id="name" type="text" name="name"  placeholder="이름을 입력하세요" required>
+        </div>
+
+        <div class="폼">
+          <label for="email">이메일</label>
+          <input id="email" type="email" name="email"  placeholder="매알주소 입력하세요" required>
+        </div>
+
+        <!-- 글 비밀번호 -->
+        <div class="폼">
+          <label for="password">비밀번호</label>
+          <input id="password" type="password" name="password" placeholder="비밀번호를 생성해주세요" required>
+        </div>
+
+        <div class="폼 문의구역">
+         <label for="message">문의내용</label>
+          <textarea id="message" name="message"  placeholder="문의내용을 입력하세요" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">문의 남기기</button>
+    </form>
+  </div>
+
+  <!-- ⬇ 스크롤하면 나오는 게시판 영역 -->
+  <section id="contact-board">
+    <div class="board-header-row">
+      <h3>남겨진 문의</h3>
+        <button type="button" id="admin-mode-btn" class="admin-btn">
+          교수님 모드 (Admin)
+        </button>
+    </div>
+    <p class="board-help">
+      작성자는 글 작성 시 입력한 비밀번호로만 내용을 다시 확인할 수 있습니다.
+    </p>
+    <div id="saved-list"></div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="푸터푸터">
+      <div class="푸터사진">
+        <img src="https://happydorm.sejong.ac.kr/resources/images/copyright_fi.png" alt="">
+      </div>
+      <div class="푸터내용">
+        <ul>
+          <li>세종대학교 나노고분자소재연구실</li>
+          <li>(055006)서울특별시 광진구 능동로 209 (군자동) 충무관 8층 814호</li>
+          <li>전화번호: 02-3408-3750</li>
+          <li class="email-text">
+            이메일:
+            <a href="mailto:sunghong@sejong.ac.kr">sunghong@sejong.ac.kr</a>
+            <span class="tool-text">메일을 보내시겠습니까</span>
+          </li>     
+        </ul>
+                    
+      </div>
+    </div>
+  </footer>
+
+
+    <!-- 📌 마지막에 너의 script.js -->
+  <script src="./js/script.js"></script>
+      
+</body>
+    
+    

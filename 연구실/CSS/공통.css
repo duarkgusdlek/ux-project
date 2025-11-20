@@ -1,0 +1,227 @@
+@charset "UTF-8";
+:root{
+    --main: rgb(66, 66, 66);
+    --sub: rgb(15, 37, 66);
+    --menu:#000000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+
+
+
+/*전역스타일*/
+html{
+    font-size: 100%;
+    scroll-behavior:smooth;
+}
+
+body{
+    color: #000000;}
+
+ #cursor {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    pointer-events: none;
+  }
+    
+
+p{
+    line-height: 1.8;
+}
+
+
+h1{
+    font-size:4rem;
+    margin-bottom: 2rem;
+}
+
+h1,h2{
+    font-family: "Hahmlet", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* 기본 wrapper — 전체 페이지 기준 동일하게 맞춰야 함 */
+.wrapper {
+    max-width: 1120px;     /* ⭐ 기존 페이지와 일관성 */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 헤더 기본 스타일 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: transparent;
+    padding: 1rem 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 로고 & 메뉴 색상 제어 */
+header a {
+    color: #ffffff;
+    font-size: 1.25rem;        /* ⭐ 1.5rem → 살짝 줄임 */
+    transition: color 0.3s ease;
+}
+
+/* 스크롤 후 색상 전환 */
+header.light,
+header.scrolled {
+    background-color: #ffffff;
+}
+
+header.light a,
+header.scrolled a {
+    color: #000000;
+}
+
+/* --------------------------------------------------------
+   PC 기본 메뉴 (flex)
+--------------------------------------------------------- */
+.main-nav {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+}
+
+.main-nav a {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------
+   📱 반응형 처리
+--------------------------------------------------------- */
+
+/* 태블릿 768px 이하 */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    .main-nav {
+        gap: 1.2rem;
+    }
+
+    header a {
+        font-size: 1.05rem;   /* 메뉴 글씨 더 작게 */
+    }
+
+    .log img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+/* 모바일 480px 이하 */
+@media (max-width: 480px) {
+    .main-nav {
+        gap: 0.8rem;
+    }
+
+    header a {
+        font-size: 0.9rem;
+    }
+
+    .log img {
+        width: 120px;
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/*푸터요*/
+/*-------------------------------------------------------------------------------------------------*/
+footer{
+    background-color: #424242;
+    color:aliceblue
+}
+
+.푸터푸터{
+    display: flex;
+    gap: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.푸터푸터 ul,li{
+    line-height: 1.6;
+
+}
+
+.email-text{
+    position:relative;
+    display: inline-block;
+}
+
+.tool-text{
+    display: none;
+    position: absolute;   
+    top: 120%;            /* ★ a 태그 아래에 툴팁 생성 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    z-index: 999;
+}
+
+.email-text:hover .tool-text{
+    display: block;
+}
+
+
+/* ===========================================
+   반응형 900px 이하 (태블릿)
+=========================================== */
+@media (max-width: 900px) {
+    .푸터푸터 {
+        gap: 150px;        /* 300px → 폭 줄어드니 절반으로 줄임 */
+    }
+}
+
+
+/* ===========================================
+   반응형 600px 이하 (모바일)
+=========================================== */
+@media (max-width: 600px) {
+    footer {
+        padding: 30px 0;   /* 위아래 공간 넣어서 답답함 해소 */
+    }
+
+    .푸터푸터 {
+        flex-direction: column; /* 가로 → 세로 쌓임 */
+        text-align: center;
+        gap: 20px;              /* 모바일에 맞게 좁은 간격 */
+    }
+
+    .푸터사진 img {
+        max-width: 150px;       /* 이미지 자동 축소 */
+        height: auto;
+    }
+
+    .푸터내용 li {
+        font-size: 0.9rem;      /* 줄여도 가독성 유지 */
+    }
+
+    /* 모바일에서는 hover tooltip 비활성화 */
+    .email-text:hover .tool-text {
+        display: none;
+    }
+}

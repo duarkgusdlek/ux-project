@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나노고분자소재연구실</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/공통.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+
+    <!-- 외부 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- dotLottie Web Component -->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+
+
+      <style>
+    /* 기본 커서 숨기기 */
+    body {
+        cursor: none; 
+        margin: 0;}
+
+    /* 로티 커서 스타일 */
+    #lottie-cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50px;   /* 원하는 크기로 바꿔도 됨 */
+        height: 50px;
+        pointer-events: none;  /* 클릭 방해 X */
+        transform: translate(-50%, -20%); /* 커서 중앙 맞추기 */
+        z-index: 9999;}
+    </style>   
+</head>
+
+<body class="aboutpage">
+    <!-- 메뉴영역 -->
+    <header>
+        <div class="wrapper">
+            <!-- 로고 -->
+            <a class="log" href="index.html"><img src="https://pr.sejong.ac.kr/_res/sejong/news/img/promotion/img-logo10.png" alt="로고"></a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="research.html">research</a></li>
+                    <li><a href="faculty.html">faculty</a></li>
+                    <li><a href="contact.html">contact</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!------------------------------------------>
+    <!-- 📌 여기부터 ABOUT 본문 -->
+   <section id="about-page" style="padding-top: 140px;">
+    <div class="information">
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.118980167115!2d127.0739606!3d37.5522605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4d1b34586cd%3A0xcf7a284a1adf8472!2z7ISc7Jq47Yq567OE7IucIOq1sOyekOuPmSDshLjsooXrjIDtlZnqtZAg7Lap66y06rSA!5e0!3m2!1sko!2skr!4v1763396346651!5m2!1sko!2skr"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="info">
+            <div class="label">
+                <ul>
+                    <li>Office</li>
+                    <li>Lab</li>
+                    <li>Tel</li>
+                    <li>Fax</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+
+            <div class="value">
+                <ul>
+                    <li>충무관 814호</li>
+                    <li>충무관 807A호</li>
+                    <li>02-3408-3750</li>
+                    <li>02-3408-4342</li>
+                    <li>sunghong@sejong.ac.kr</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    
+</section>
+    <!-- footer -->
+    <footer>
+        <div class="푸터푸터">
+            <div class="푸터사진">
+                <img src="https://happydorm.sejong.ac.kr/resources/images/copyright_fi.png" alt="">
+            </div>
+            <div class="푸터내용">
+                <ul>
+                    <li>세종대학교 나노고분자소재연구실</li>
+                    <li>(055006)서울특별시 광진구 능동로 209 (군자동) 충무관 8층 814호</li>
+                    <li>전화번호: 02-3408-3750</li>
+                    <li class="email-text">
+                        이메일:
+                        <a href="mailto:sunghong@sejong.ac.kr">sunghong@sejong.ac.kr</a>
+                        <span class="tool-text">메일을 보내시겠습니까</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 로티 애니메이션 커서 -->
+    <dotlottie-wc
+    id="lottie-cursor"
+  src="https://lottie.host/c1a0f7b0-f9a6-4bfd-aa38-93ded4d0c364/O5aOT6LWUj.lottie"
+  autoplay
+  loop></dotlottie-wc>
+
+  <script>
+  const cursor = document.getElementById("lottie-cursor");
+
+  // 마우스 좌표 따라 이동
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
+    
+
+</body>
+</html>

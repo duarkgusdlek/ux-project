@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나노고분자소재연구실</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/공통.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+
+    <!-- 외부 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+
+
+    <style>
+    /* 기본 커서 숨기기 */
+    body {
+        cursor: none; 
+        margin: 0;}
+
+    /* 로티 커서 스타일 */
+    #lottie-cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100px;   /* 원하는 크기로 바꿔도 됨 */
+        height: 100px;
+        pointer-events: none;  /* 클릭 방해 X */
+        transform: translate(-50%, -50%); /* 커서 중앙 맞추기 */
+        z-index: 9999;}
+    </style>  
+</head>
+
+<body class="reserch-page">
+    <div id="cursor"></div>
+    <!-- 헤더영역 -->
+    <header>
+        <div class="wrapper">
+            <!-- 로고 -->
+            <a class="log" href="index.html"><img src="https://pr.sejong.ac.kr/_res/sejong/news/img/promotion/img-logo10.png" alt="로고"></a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="research.html">research</a></li>
+                    <li><a href="faculty.html">faculty</a></li>
+                    <li><a href="contact.html">contact</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--여기서부터 리서치 에리아-->
+    <section class="리서치-에리아" id="researc-area">
+        <div class="intro">
+            <h2>Research Areas</h2>
+            <p>본 연구실은 3가지 핵심 연구 분야를 중심으로 기능성 고분자 재료를 개발합니다.</p>
+        </div>
+
+        <div class="area">
+            <!--카드1-->
+            <div class="area-card-one">
+                <p class="area-title">Functional Polyolefins</p>
+                <p class="area-desc">C폴리올레핀에 다양한 기능기를 도입해 접착성, 도장성, 염색성을 향상시키는 연구
+            </div>
+            
+            <!--카드2-->
+            <div class="area-card-two">
+                <p class="area-title">Eco-Polyurethane</p>
+                <p class="area-desc">CO₂ 및 식물유 기반 폴리올을 활용한 친환경 폴리우레탄 합성 및 물성 평가</p>
+            </div>
+
+            <!--카드3-->
+            <div class="area-card-three">
+                <p class="area-title">Rubber Foam</p>
+                <p class="area-desc">천연·합성 고무 발포체의 구조 제어와 경량·생분해성 향상 연구</p>
+            </div>
+        </div>
+    </section>
+
+<!--여기서부터 리서치 디테일-->
+    <section class="리서치-디테일" id="research-detail">
+      <div class="container">
+        <div class="intro">
+            <h2 class="intro">Research Detail</h2>
+            <p>각 연구 분야별 합성 전략, 물성 평가 및 응용 분야 요약입니다.</p>
+
+        </div>
+        
+          
+
+        <div class="detail-list">
+            <!-- detail 1 -->
+            <div class="detail-list-one detail-item">
+                <h3 class="detail-title">Functional Polyolefins</h3>
+                <p class="detail-summary">
+                폴리에틸렌, 폴리프로필렌 등 범용 폴리올레핀의 비극성·저접착성 문제를
+                개질을 통해 개선합니다.</p>
+
+                <div class="detail-full">
+                    <div class="detail-img polyfin-img">
+                        <img src="./CSS/img/폴리올레핀.png" alt="기능성 폴리올레핀">
+                    </div>
+                    <p>
+                        폴리올레핀은 우수한 화학적 안정성과 기계적 물성을 가지지만 비극성이라 다른 재료와의 접착성이 떨어지는 문제가 있습니다. 
+                        <br>본 연구실은 표면 개질,산화 도입, 기능기 grafting 등의 방법을 활용하여 이러한 한계를 극복하는 연구를 수행합니다.
+                    </p>
+                    <p class="sub-title">주요 연구주제</p>
+                    <ul>
+                        <li>표면 개질을 통한 접착성/도장성/염색성 향상</li>
+                        <li>고분자 블렌드용 상용화제 및 계면제 개발</li>
+                        <li>산화 및 기능기 도입을 통한 계면 제어</li>
+                    </ul>
+
+                </div>
+                
+            </div>
+
+            <!-- detail 2 -->
+            <div class="detail-list-two detail-item">
+                <h3 class="detail-title">Eco-Polyurethane</h3>
+                <p class="detail-summary">
+                CO₂ 기반 또는 식물유 기반 폴리올을 이용해 친환경 폴리우레탄을 합성하고,
+                열·기계적 물성을 분석합니다.</p>
+
+                <div class="detail-full">
+                    <div class="detail-img">
+                        <img src="./CSS/img/우레탄.png" alt="에코 폴리우레탄">
+                    </div>
+                    <p>
+                    폴리우레탄은 널리 활용되는 고분자로, 본 연구실은 CO₂ 기반 폴리올이나 바이오매스 유래 폴리올을 이용해 
+                    <br>보다 친환경적인 TPU 및 폼을 합성합니다.
+                    상분리 제어를 통한 열적 가역성 향상 연구도 함께 진행됩니다.</p>
+                    <p class="sub-title">주요 연구주제</p>
+                    <ul>
+                        <li>Bio-based polyol을 이용한 TPU/폼 합성</li>
+                        <li>상분리 제어 및 thermo-reversible 특성 연구</li>
+                        <li>치과·생체재료 등 고부가 응용처 평가</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- detail 3 -->
+            <div class="detail-list-three detail-item">
+                <h3 class="detail-title">Rubber Foam</h3>
+                
+                <p>
+                천연/합성 고무 발포체의 기공 구조를 제어해 경량성과 탄성,
+                단열 특성을 동시에 확보하는 연구입니다.</p>
+
+                <div class="detail-full">
+                    <div class="detail-img">
+                        <img src="./CSS/img/고무.png" alt="천연 합성고무 발포체">
+                    </div>
+                    <p>
+                    다양한 고무 원료를 활용해 기공 구조를 정밀하게 조절하여 기계적 강도와 탄성, 단열 성능을 최적화하는 연구를 수행합니다. 
+                    <br>또한 환경 부하를 줄이기 위해 생분해성 첨가제를 활용한 친환경 발포체 연구도 함께 진행합니다.</p>
+
+
+                    <p class="sub-title">주요 연구주제</p>
+                    <ul>
+                        <li>발포 공정 조건에 따른 기공 구조 제어</li>
+                        <li>생분해성 첨가제를 이용한 친환경 발포체</li>
+                        <li>자동차·포장·단열재 응용 설계</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- footer -->
+    <footer>
+        <div class="푸터푸터">
+            <div class="푸터사진">
+                <img src="https://happydorm.sejong.ac.kr/resources/images/copyright_fi.png" alt="">
+            </div>
+            <div class="푸터내용">
+                <ul>
+                    <li>세종대학교 나노고분자소재연구실</li>
+                    <li>(055006)서울특별시 광진구 능동로 209 (군자동) 충무관 8층 814호</li>
+                    <li>전화번호: 02-3408-3750</li>
+                    <li class="email-text">
+                        이메일:
+                        <a href="mailto:sunghong@sejong.ac.kr">sunghong@sejong.ac.kr</a>
+                        <span class="tool-text">메일을 보내시겠습니까</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+<!-여기서부터 커서 자바---------------------------------------------->
+<dotlottie-wc id="lottie-cursor"
+src="https://lottie.host/ccb3b6fd-9111-4c23-a02f-aedc32024991/TnXG433WGN.lottie"
+autoplay loop></dotlottie-wc>
+
+
+ <script>
+  const cursor = document.getElementById("lottie-cursor");
+
+  // 마우스 좌표 따라 이동
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
+
+<!--여기서 부터 만든 자바-->
+<script src="./js/script.js"></script>
+
+    
+
+
+
+</body>
+</html>

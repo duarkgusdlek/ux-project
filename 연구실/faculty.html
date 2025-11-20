@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나노고분자소재연구실</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/공통.css">
+    <link rel="stylesheet" href="./css/style4.css">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+
+    <!-- 외부 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+        type="module"></script>
+
+
+    <style>
+    /* 기본 커서 숨기기 */
+    body {
+        cursor: none; 
+        margin: 0;}
+
+    /* 로티 커서 스타일 */
+    #lottie-cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;   /* 원하는 크기로 바꿔도 됨 */
+        height: 300px;
+        pointer-events: none;  /* 클릭 방해 X */
+        transform: translate(-50%, -50%); /* 커서 중앙 맞추기 */
+        z-index: 9999;}
+    </style>
+
+
+   
+</head>
+<body class="faculty-page">
+   
+    <!-- 메뉴영역 -->
+    <header>
+        <div class="wrapper">
+            <!-- 로고 -->
+            <a class="log" href="index.html"><img src="https://pr.sejong.ac.kr/_res/sejong/news/img/promotion/img-logo10.png" alt="로고"></a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="research.html">research</a></li>
+                    <li><a href="faculty.html">faculty</a></li>
+                    <li><a href="contact.html">contact</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Profile Section -->
+<section id="profile">
+  <div class="original-info">
+    <!-- 왼쪽: 사진 -->
+    <div class="photo">
+      <img src="https://home.sejong.ac.kr/~sunghong/main/SKIN20151012161006.jpg" alt="홍성철 교수님 사진">
+    </div>
+
+    <!-- 중앙: 이름 ~ 멤버 -->
+    <div class="center-info">
+      <div class="name">
+        <p class="sub-name">Name</p>
+        <p>홍성철</p>
+      </div>
+
+      <div class="major">
+        <p class="sub-name">Major</p>
+        <p>Polymer Synthesis, Functional Polymer, Eco-friendly polymer, Polyolefin</p>
+      </div>
+
+      <div class="interest">
+        <p class="sub-name">Recent Interest</p>
+        <p>Controlled and living polymerization techniques</p>
+        <p>Controlled/"living" radical polymerization</p>
+        <p>Metallocene and Ziegler-Natta catalysts for coordination polymerization of olefins</p>
+        <p>Synthesis of well-defined block or graft copolymers and their applications</p>
+        <p>High performance functional polyolefins</p>
+      </div>
+
+      <div class="edu">
+        <p class="sub-name">Education</p>
+        <p>Ph.D., Chemical Technology(Polymer Synthesis), Seoul National University, Korea, August 1996</p>
+        <p>M.S., Chemical Technology(Polymer Science), Seoul National University, Korea, February 1993</p>
+        <p>B.S., Chemical Technology(Polymer Science), Seoul National University, Korea, February 1990</p>
+      </div>
+
+      <div class="members">
+        <p class="sub-name">Current Members (2024.09~)</p>
+        <div class="구성원">
+          <div class="직위">
+            <p>Post-doc student</p>
+            <p>MS student</p>
+            <p>BS student</p>
+            <p>BS student</p>
+          </div>
+          <div class="연구실멤버들">
+            <p>Rama Moorthy Appa</p>
+            <p>Sevin Oh</p>
+            <p>You Jin Jeon</p>
+            <p>Nakyoung Son</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽: Experience -->
+    <div class="experience-list">
+      <p class="sub-name">Experience</p>
+      <div class="experience-item">
+        <div class="date">2004.09 ~ 현재</div>
+        <div class="info">
+          <p class="place">Sejong University, Seoul, Korea</p>
+          <p class="role">Associate Professor, Faculty of Nanotechnology and Advanced Materials Engineering</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="date">2002.01 ~ 2004.01</div>
+        <div class="info">
+          <p class="place">Crompton Corporation, Naugatuck, Connecticut, USA</p>
+          <p class="role">Scientist, New Technology Development Department</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="date">2000.01 ~ 2001.11</div>
+        <div class="info">
+          <p class="place">Carnegie Mellon University, Pittsburgh, PA, USA</p>
+          <p class="role">Postdoctoral Research Scientist, Prof. Krzysztof Matyjaszewski's Laboratory</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="date">1998.03 ~ 1999.09</div>
+        <div class="info">
+          <p class="place">BASF AG, Ludwigshafen, Germany</p>
+          <p class="role">Postdoctoral Research Chemist, Central Polymer Research Center</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="date">1997.03 ~ 1998.02</div>
+        <div class="info">
+          <p class="place">Japan Advanced Institute of Science and Technology, Ishikawa, Japan</p>
+          <p class="role">Postdoctoral Research Scientist, Prof. Kazuo Soga's Laboratory</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 수상 섹션 -->
+<section class="awards-section">
+  <p class="sub-name">Awards</p>
+  <div class="awards-list">
+    <ul>
+      <li>세종대학교 20년 장기근속 표창, 2025.05.20</li>
+      <li>Excellent Paper Award, KSIEC Fall Meeting, 20231109</li>
+      <li>Excellent Paper Award, KSIEC Spring Meeting, 20230512</li>
+      <li>공로상, KSIEC, 20220512</li>
+      <li>산업통상자원부 장관표창, 2021.10.29</li>
+      <li>학회발전상, KSIEC, 20201207</li>
+      <li>Excellent Poster Award, KPU 20190829</li>
+      <li>Albert Nelson Marquis Lifetime Achievement Award, 20180412</li>
+      <li>Marquis Who’s Who, 20180301</li>
+      <li>Excellent Paper Award, KSIEC Fall Meeting, 20181102</li>
+      <li>Outstanding Poster Award, IUPAC-FAPS 2017, 20171012</li>
+      <li>Excellent Paper Presentation Award, KSIEC Spring Meeting, 20170511</li>
+      <li>Excellent Paper Presentation Award, KSIEC Spring Meeting, 20170511 </li>
+      <li>Excellent Paper Award, KSIEC Spring Meeting, 20170512</li>
+      <li>학회발전상, KSIEC, 20161212</li>
+      <li>Outstanding Poster Award, IUPAC-PSK40, 20161007</li>
+      <li>Outstanding Poster Award, KSIEC Spring, 20160504</li>
+      <li>Mid-career Researcher Academy Award, PSK, 20141007</li>
+      <li>Outstanding Poster Award, KRubber 20130315</li>
+      <li>Outstanding Poster Award, IRC 20120523</li>
+      <li>The Best Paper Award, KRubber, 20100326</li>
+      <li>Outstanding Poster Award, PSK Spring 20090409</li>
+      <li>Outstanding Poster Award, PSK Spring 20070412</li>
+    </ul>
+  </div>
+</section>
+
+<!-- footer -->
+    <footer>
+        <div class="푸터푸터">
+            <div class="푸터사진">
+                <img src="https://happydorm.sejong.ac.kr/resources/images/copyright_fi.png" alt="">
+            </div>
+            <div class="푸터내용">
+                <ul>
+                    <li>세종대학교 나노고분자소재연구실</li>
+                    <li>(055006)서울특별시 광진구 능동로 209 (군자동) 충무관 8층 814호</li>
+                    <li>전화번호: 02-3408-3750</li>
+                    <li class="email-text">
+                        이메일:
+                        <a href="mailto:sunghong@sejong.ac.kr">sunghong@sejong.ac.kr</a>
+                        <span class="tool-text">메일을 보내시겠습니까</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--여기서부터 자바-->
+    <!------------커서----------------------->
+    <dotlottie-wc
+    id="lottie-cursor"
+    src="https://lottie.host/4e75b98b-6b26-465f-a98b-5d35ef082fef/EfOTfGHY09.lottie"
+    
+    autoplay loop></dotlottie-wc>
+
+    <script>
+        const cursor = document.getElementById("lottie-cursor");
+
+        // 마우스 좌표 따라 이동
+        document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+         });
+    </script>
+
+
+    
+
+
+
+</body>
+</html>

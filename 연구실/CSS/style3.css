@@ -1,0 +1,321 @@
+*전역 스타일*/
+
+html, body{height: 100%;}
+
+
+body.research-gpage{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*---------------------------------------------------*/
+/*헤더랑 푸터------------------------------------*/
+/*---------------------------------------------------*/
+body.reserch-page header { background:#fff; }
+body.reserch-page header a { color:#000; }
+
+footer{
+
+    margin-top: auto;   /* 위의 콘텐츠가 남는 공간을 다 먹고, 푸터는 맨 아래로 밀림 */
+}
+
+/*---------------------------------------------------*/
+/*공통 섹션 파트*/
+/*---------------------------------------------------*/
+section {
+    padding: 100px 0;
+}
+
+.container, .intro {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* ===========================
+   Research Areas (flex로 3단 카드)
+   =========================== */
+
+.리서치-에리아 {
+    padding: 130px 0;
+    background: #ffffff;
+}
+
+.리서치-에리아 .intro {
+    max-width: 1120px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+}
+
+.리서치-에리아 .intro h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.리서치-에리아 .intro p {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* flex 3단 카드 */
+.area {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* 모든 카드 공통 */
+.area > div {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    transition: 0.25s ease;
+    position: relative;
+}
+
+/*호버했을 때 올렸을 때 위로 떠오르는 느낌 추가*/
+.area > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* 주제구분 라벨 */
+.area-card-one::before,
+.area-card-two::before,
+.area-card-three::before {
+    content: "연구주제 01";
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.area-card-two::before { content: "연구주제 02"; }
+.area-card-three::before { content: "연구주제 03"; }
+
+/* 제목 */
+.area-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* 설명 */
+.area-desc {
+    font-size: 0.92rem;
+    color: #4b5563;
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* 자세히 보기 링크(시안 느낌) */
+.area > div::after {
+    content: "자세히 보기 →";
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+}
+
+
+
+/* ===========================
+   Research Detail 섹션 전체
+=========================== */
+
+.리서치-디테일 {
+    padding: 80px 0;
+    background: #f5f7fa; /* 살짝 회색 배경 */
+}
+
+.리서치-디테일 .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.리서치-디테일 .intro {
+    margin-bottom: 10px;
+}
+
+.리서치-디테일 .intro h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.리서치-디테일 .intro p {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* detail 카드 리스트 전체 */
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+/* 각 detail 카드 공통 박스 */
+.detail-item { 
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px 26px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    cursor: pointer;
+}
+
+.detail-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* 항상 보이는 한 줄 요약 */
+.detail-summary {
+    font-size: 0.93rem;
+    color: #334155;
+    margin-bottom: 4px;}
+
+
+/* 기본: 상세 내용은 접혀있음 */
+.detail-full {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    margin-top: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      margin-top 0.3s ease;
+}
+
+/* 열렸을 때:js 되는거 */
+/* 상세 내용: 기본 접힘 */
+.detail-full {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-4px);
+    margin-top: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      margin-top 0.3s ease;
+}
+
+.detail-full ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+/* detail-item가 active일 때만 상세 열림 */
+.detail-item.active .detail-full {
+    max-height: 1000px;  
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 8px;
+}
+/* ======================
+   공통 Detail 이미지 박스
+====================== */
+.detail-img {
+    max-width: 800px;
+    width: 100%;
+    max-height: 800px;
+    height: 100%;        /* 일반 이미지에 맞는 적당한 높이 */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 일반 이미지: 커버(잘라도 됨) */
+    display: block;
+}
+
+/* ======================
+   폴리올레핀 전용 스타일(이미지 크기 때문에)
+====================== */
+.polyolefin-img {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 12px;
+
+    /* 공통 detail-img의 height/overflow 제거 */
+    height: auto !important;
+    overflow: visible !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polyolefin-img img {
+    max-width: 100%;
+    height: auto !important;
+    object-fit: contain !important;   /* 절대 자르지 않음 */
+    display: block;
+}
+
+
+
+
+/* 상세 안의 텍스트*/
+.detail-full p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.detail-full ul {
+    padding-left: 18px;
+}
+
+.detail-full li {
+    font-size: 0.88rem;
+    color: #475569;
+    margin-bottom: 4px;}
+

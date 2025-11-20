@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+:root{
+    --main: rgb(, 223, 230);
+    --sub: rgb(15, 37, 66);
+    --menu:#000000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* ---------------------------------------------- */
+/* HERO                                          */
+/* --------------------------------------------- */
+#hero{
+    position: relative;
+    background-color: var(--sub);
+    background-image:url('https://materials.ssu.ac.kr/bbs/data/bbs42/8d3c3098_sub0402_img01.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-blend-mode: screen;
+    height:95vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#particles-hero {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#hero .herotext{
+    text-align:center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero .herotext > h1{
+    font-size: 5rem;
+    text-align:center;
+}
+
+#hero .herotext > p{
+    color:rgb(107, 0, 0);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align:center;
+}
+
+#hero .herotext > button{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(12, 25, 36);
+    color:beige;
+    font-weight: 300;
+
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 30%;
+}
+
+/* --------------------------------------------- */
+/* 소개 섹션 (#main)                              */
+/* --------------------------------------------- */
+#main{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+/* 텍스트/이미지 기본 레이아웃 */
+#main .연구내용>h1{
+    font-size:2rem;
+    padding: 2rem;
+}
+
+#main .연구내용>p{
+    padding: 0 2rem 2rem 2rem;
+}
+
+#main .연구사진>img{
+    padding: 2rem 0 2rem 2rem;
+}
+
+/* 공통: 스크롤 애니메이션 섹션 래퍼 */
+.curtain-side {
+  position: relative;
+  overflow: hidden;
+}
+
+/* #main 섹션에만 커튼 레이어 씌우기 */
+#main.curtain-side::before {
+  content: "";
+  position: absolute;
+  inset: 0;                     /* 전체 덮기 */
+  background: #ffffff;          /* 커튼 색 (필요하면 var(--main) 같은 걸로 변경 가능) */
+  transform: translateY(0);     /* 처음엔 완전 덮여있음 */
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+  z-index: 2;
+  pointer-events: none;         /* 안에 링크 클릭 가능하게 */
+}
+
+/* show 붙으면 커튼이 위로 쫙 열림 */
+#main.curtain-side.show::before {
+  transform: translateY(-100%);
+}
+
+/* 메인 섹션 내부 요소: 커튼 아래에 있고, 살짝 아래에서 올라오게 (옵션) */
+.연구실소개 .연구내용,
+.연구실소개 .연구사진 {
+  opacity: 0;
+  transform: translateY(24px);  /* 아래에 숨어 있다가 */
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+  position: relative;
+  z-index: 1;                   /* 커튼보다 아래, hero/헤더보다 아래 */
+}
+
+/* show가 붙었을 때: 아래→위로 쓱 열리는 느낌 */
+.연구실소개.show .연구내용,
+.연구실소개.show .연구사진 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 살짝 순서감 주기 (텍스트 먼저, 사진 나중) */
+.연구실소개.show .연구내용 {
+  transition-delay: 0.1s;
+}
+.연구실소개.show .연구사진 {
+  transition-delay: 0.2s;
+}
+
+/* --------------------------------------------- */
+/* Recent research 섹션                          */
+/* --------------------------------------------- */
+
+#recent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    /* 스크롤 애니메이션용 초기 상태 */
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s ease-out;
+}
+
+#recent.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#recent > h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Swiper 카드 스타일 */
+#recent .swiper-slide {
+    width: 350px;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 카드 이미지 */
+#recent .swiper-slide img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #000;
+}
+
+/* 카드 텍스트 */
+#recent .swiper-slide p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: rgb(69, 70, 73);
+}
+
+#global-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 8px); /* 커서 바로 아래 중심에 놓기 */
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+    z-index: 9999;
+}

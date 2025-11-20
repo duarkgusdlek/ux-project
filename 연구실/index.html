@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나노고분자소재연구실</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/공통.css">
+    <link rel="stylesheet" href="./CSS/style1.css">
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+
+    <!-- 외부 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+
+
+    <style>
+    /* 기본 커서 숨기기 */
+    body {
+        cursor: none; 
+        margin: 0;}
+
+    /* 로티 커서 스타일 */
+    #lottie-cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50px;   /* 원하는 크기로 바꿔도 됨 */
+        height: 50px;
+        pointer-events: none;  /* 클릭 방해 X */
+        transform: translate(-50%, -50%); /* 커서 중앙 맞추기 */
+        z-index: 9999;}
+    </style>
+
+   
+</head>
+<body>
+    <!-- 메뉴영역 -->
+    <header>
+        <div class="wrapper">
+            <!-- 로고 -->
+            <a class="log" href="index.html"><img src="https://pr.sejong.ac.kr/_res/sejong/news/img/promotion/img-logo10.png" alt="로고"></a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="research.html">research</a></li>
+                    <li><a href="faculty.html">faculty</a></li>
+                    <li><a href="contact.html">contact</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div id="particles-hero"></div>
+        <div class="herotext">
+            <h1>나노고분자소재연구실</h1>
+            <p>현재 학부 연구생 모집중</p>
+            <button class="에라이"><a href="mailto:sunghong@sejong.ac.kr">contact</a></button>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 (커튼 + 스크롤 애니메이션 대상) -->
+    <section id="main" class="연구실소개 curtain-side">
+        <div class="연구내용">
+            <h1>나노고분자소재연구실</h1>
+            <p>
+                나노고분자재료실험실은, 나노기술(NT), 에너지 및 환경기술(ET), 정보전자기술(IT), 차세대 산업기술 등의 
+                <br>핵심 소재인 고분자를 정밀 고분자합성 기술을 바탕으로 디자인, 합성, 평가, 응용, 산업화하고 있다. 
+                <br>특히, 기능성 폴리올레핀, 블록 및 그라프트 공중합체, 에너지 및 탄소소재용 고분자 등
+                <br>중요 기반 고분자 소재의 신규 가치 창조에 노력하고 있다.
+            </p>
+            <p>
+                Sejong University’s Nano-Polymer Materials Laboratory focuses on the fundamental and applied research of advanced polymer materials.<br>
+                Leveraging precision polymer-synthesis technologies, the lab designs, synthesizes, and evaluates polymers that serve as key materials 
+                <br>in nanotechnology (NT), energy and environmental technology (ET), information and electronics technology (IT) and next-generation 
+                <br>industrial fields. In particular, the lab conducts in-depth studies on functional polyolefins, block and graft copolymers, and polymer systems 
+                <br>for energy and carbon-related applications, aiming to develop high-performance materials and create new value in essential polymer-science platforms.
+            </p>
+        </div>
+        
+        <div class="연구사진">
+            <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201410/17/htm_20141017105323l100l101.jpg" alt="연구실 사진">
+        </div>
+    </section>
+
+    <!-- Recent research 섹션 (스크롤 시 나타나기) -->
+    <section id="recent" class="curtain-side">
+        <h1>Recent research</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper 최근연구">
+                <div class="swiper-slide rese1 tooltip-card" data-tooltip="보러가기">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1381514825001142">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1381514825001142-ga1.jpg" alt="">
+                        <p>Room temperature photolytic C-H insertion of azidoformate for virucidal polypropylene non-woven fabric with enhanced durability</p>
+                    </a>   
+                    
+                </div>
+
+                <div class="swiper-slide rese2 tooltip-card" data-tooltip="보러가기">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S2468023025001774">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2468023025001774-ga1.jpg" alt="">
+                        <p>Durable and reusable antiviral polypropylene fabric via facile UV-assisted modification</p>
+                    </a>
+                    
+                </div>
+
+                <div class="swiper-slide rese3 tooltip-card" data-tooltip="보러가기">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S014294182400312X">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S014294182400312X-ga1.jpg" alt="">
+                        <p>Modification of polyolefins utilizing C–H insertion of azides: Azidoformate end-functionalized polystyrene for modifying polypropylene"</p>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <div class="swiper-slide rese4 tooltip-card" data-tooltip="보러가기">               
+                    <a href="https://www.sciencedirect.com/science/article/pii/S014294182400165X">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S014294182400165X-ga1.jpg" alt=""> 
+                        <p>Post-polymerization modification of polypropylene with different functional groups utilizing non-catalytic C–H insertion of sulfonyl azide</p>
+                    '</a>
+                </div>
+
+                <div class="swiper-slide tooltip-card" data-tooltip="보러가기">
+                    <a href="https://www.mdpi.com/2073-4360/16/8/1171">
+                        <img src="https://mdpi-res.com/polymers/polymers-16-01171/article_deploy/html/images/polymers-16-01171-sch001-550.jpg" alt="">
+                        <p>Preparation of Non-Isocyanate Polyurethanes from Mixed Cyclic-Carbonated Compounds: Soybean Oil and CO2-Based Poly(ether carbonate)</p>
+
+                    </a>
+                                   
+                    
+                    
+                </div>
+
+                <div class="swiper-slide rese6 tooltip-card" data-tooltip="보러가기">
+                                    
+                   <a href="https://link.springer.com/article/10.1007/s10404-024-02731-1">
+                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10404-024-02731-1/MediaObjects/10404_2024_2731_Fig1_HTML.png?as=webp" alt="">
+                        <p> Characterization of microfluidic trap and mixer module for rapid fluorescent tagging of microplastics, Microfluidics and Nanofluidics 28</p>
+                    </a>
+                    
+                </div>
+
+                <div class="swiper-slide rese7 tooltip-card" data-tooltip="보러가기">
+                                    
+                    <a href="https://www.mdpi.com/2079-4991/13/8/1328">
+                        <img src="https://www.mdpi.com/nanomaterials/nanomaterials-13-01328/article_deploy/html/images/nanomaterials-13-01328-g001-550.jpg" alt="">
+                        <p>Effect of Graphite Nanoplatelet Size and Dispersion on the Thermal and Mechanical Properties of Epoxy-Based Nanocomposites</p>
+                    </a>
+                    
+                </div>
+
+                <div class="swiper-slide rese8 tooltip-card" data-tooltip="보러가기">
+                                 
+                    <a href="https://pubs.acs.org/doi/10.1021/acsapm.2c01583f">
+                        <img src="https://pubs.acs.org/cms/10.1021/acsapm.2c01583/asset/images/medium/ap2c01583_0012.gif" alt="">   
+                        <p>Preparation of Polypropylene with Strain Hardening Characteristics via the Noncatalytic C–H Insertion of Azidoformate</p>
+                    </a>
+                    
+                </div>
+
+                <div class="swiper-slide rese9 tooltip-card" data-tooltip="보러가기">
+                                    
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0142941822003130">
+                        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0142941822003130-sc1.jpg" alt="">
+                        <p>Preparation and characteristics of polypropylene with long chain branches utilizing the C–H insertion capability of azidoformate</p>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="푸터푸터">
+            <div class="푸터사진">
+                <img src="https://happydorm.sejong.ac.kr/resources/images/copyright_fi.png" alt="">
+            </div>
+            <div class="푸터내용">
+                <ul>
+                    <li>세종대학교 나노고분자소재연구실</li>
+                    <li>(055006)서울특별시 광진구 능동로 209 (군자동) 충무관 8층 814호</li>
+                    <li>전화번호: 02-3408-3750</li>
+                    <li class="email-text">
+                        이메일:
+                        <a href="mailto:sunghong@sejong.ac.kr">sunghong@sejong.ac.kr</a>
+                        <span class="tool-text">메일을 보내시겠습니까</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<!-------여기서부터 자바임....-->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- particles -->
+<script src="./js/particles.js-master/particles.min.js"></script>
+
+<!-- 📌 마지막에 너의 script.js -->
+<script src="./js/script.js"></script>
+
+ <!-- 로티 애니메이션 커서 -->
+    <dotlottie-wc
+    id="lottie-cursor"
+  src="https://lottie.host/c1a0f7b0-f9a6-4bfd-aa38-93ded4d0c364/O5aOT6LWUj.lottie"
+  autoplay
+  loop></dotlottie-wc>
+
+  <script>
+  const cursor = document.getElementById("lottie-cursor");
+
+  // 마우스 좌표 따라 이동
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
+
+
+</body>
+</html>
